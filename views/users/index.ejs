@@ -1,0 +1,31 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Photo Profile</th>
+            <th>Age</th>
+            <th>Phone Number</th>
+        </tr>
+    </thead>
+    <% users.forEach (function(user) { %>
+        <tbody>
+            <% users.map((user)=> { %>
+                <tr>
+                    <td>
+                        <%= user.firstName %>
+                    </td>
+                    <td>
+                        <img src="<%= user.photoProfile %>" alt="Profile photo" class="rounded my-auto d-block"
+                            style="width: 100px; height: 100px;">
+                    </td>
+                    <td>
+                        <%= user.age %>
+                    </td>
+                    <td>
+                        <%= user.phoneNumber %>
+                    </td>
+                </tr>
+                <% }) %>
+        </tbody>
+    <% }); %>
+</table>
